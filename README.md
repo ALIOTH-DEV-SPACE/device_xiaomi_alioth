@@ -1,25 +1,24 @@
-Copyright (C) 2020 The LineageOS Project
+Copyright (C) 2020 - raystef66
 
-Device configuration for Xiaomi Redmi K30
-=========================================
+Copyright (C) 2020 - ALIOTH-DEVS
 
-The Xiaomi Redmi K30 (codenamed _"phoenix"_) is a mid range smartphone from Xiaomi's sub-brand Redmi.
-
-It was announced and released in December 2019.
+Device configuration for POCO F3 (alioth)
 
 ## Device specifications
 
 Basic   | Spec Sheet
--------:|:-------------------------
-SoC     | Qualcomm SDM730 Snapdragon 730G
-CPU     | Octa-core (2x2.2 GHz Kryo 470 Gold & 6x1.8 GHz Kryo 470 Silver)
-GPU     | Adreno 618
-Memory  | 6/8 GB RAM
-Shipped Android Version | 10 with MIUI 11
-Storage | 64/128/256 GB
-Battery | Non-removable Li-Po 4500 mAh battery
-Display | 1080 x 2400 pixels, 20:9 ratio, 6.67 inches, IPS LCD (~386 ppi density)
+-------:|:----------
+CPU     | 1x3.2 GHz Kryo 585 & 3x2.42 GHz Kryo 585 & 4x1.80 GHz Kryo 585 
+Chipset | Qualcomm® Snapdragon 870
+GPU     | Adreno 650
+ROM     | 128/256GB
+RAM     | 6/8GB
+Android | 11.0
+Battery | 4520 mAh
+Display | AMOLED, 120Hz, HDR10+, 1300 nits
+Rear Camera  | 48/8/5MP
+Front Camera | 20MP
 
 ## Device picture
+![POCO F3](https://i01.appmifile.com/webfile/globalimg/products/pc/poco-f2-pro/phone1.png "Poco F3 back")
 
-![Xiaomi Redmi K30](https://xiaomi-mi.com/uploads/CatalogueImage/redmi-k30%20(10)_17912_1577645087.jpg "Xiaomi Redmi K30 in blue")
