@@ -153,7 +153,7 @@ PRODUCT_COPY_FILES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.2-service.alioth
+    android.hardware.power-service.alioth
 
 # Properties
 -include $(LOCAL_PATH)/system_prop.mk
