@@ -162,6 +162,9 @@ TARGET_COPY_OUT_VENDOR := vendor
 TARGET_PRODUCT_PROP += $(DEVICE_PATH)/product.prop
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 
+# Power
+TARGET_USES_INTERACTION_BOOST := true
+
 # Recovery
 TARGET_NO_RECOVERY := false
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
