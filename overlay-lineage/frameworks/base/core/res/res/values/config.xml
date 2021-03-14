@@ -35,4 +35,7 @@
     <!-- Flag specifying whether pocked mode is available on device -->
     <bool name="config_pocketModeSupported">true</bool>
 
+    <!-- Enable face auth only when swiping security view -->
+    <bool name="config_faceAuthOnlyOnSecurityView">true</bool>
+
 </resources>
