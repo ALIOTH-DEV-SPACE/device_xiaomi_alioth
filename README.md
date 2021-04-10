@@ -20,5 +20,5 @@ Rear Camera  | 48/8/5MP
 Front Camera | 20MP
 
 ## Device picture
-![POCO F3](https://i01.appmifile.com/webfile/globalimg/products/pc/poco-f2-pro/phone1.png "Poco F3 back")
+![POCO F3](https://i.postimg.cc/fR7jnDzk/pocof3.png "Poco F3 back")
 
