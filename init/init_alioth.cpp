@@ -34,13 +34,15 @@
 
 #include <android-base/properties.h>
 #define _REALLY_INCLUDE_SYS__SYSTEM_PROPERTIES_H_
+#include <stdlib.h>
+#include <sys/sysinfo.h>
+#include <sys/system_properties.h>
 #include <sys/_system_properties.h>
 
 #include "property_service.h"
 #include "vendor_init.h"
 
 using android::base::GetProperty;
-using android::init::property_set;
 
 std::vector<std::string> ro_props_default_source_order = {
     "",
@@ -54,7 +56,7 @@ std::vector<std::string> ro_props_default_source_order = {
 void property_override(char const prop[], char const value[], bool add = true)
 {
     prop_info *pi;
-    pi = (prop_info *) __system_property_find(prop);
+    pi = (prop_info*) __system_property_find(prop);
     if (pi)
         __system_property_update(pi, value, strlen(value));
     else if (add)
@@ -80,15 +82,14 @@ void vendor_load_properties() {
     region = GetProperty("ro.boot.hwc", "GLOBAL");
 
     if (region == "GLOBAL") {
-        set_ro_product_prop("model", "Pocophone F2 Pro");
-        set_ro_product_prop("device", "lmi");
-        set_ro_build_prop("fingerprint", "Redmi/lmi/lmi:10/QKQ1.191117.002/V12.0.3.0.QJKMIXM:user/release-keys");
-        property_override("ro.build.description", "lmi-user 10 QKQ1.191117.002 V12.0.3.0.QJKMIXM release-keys");
+        set_ro_product_prop("model", "POCO F3");
+        set_ro_product_prop("device", "alioth");
+        set_ro_build_prop("fingerprint", "Redmi/alioth/alioth:11/RKQ1.200826.002/V12.0.2.0.RKHEUXM:user/release-keys");
+        property_override("ro.build.description", "alioth-user 11 RKQ1.200826.002 V12.0.2.0.RKHEUXM release-keys");
     } else if (region == "CN") {
-        set_ro_build_prop("model", "Redmi K30 Pro");
-        set_ro_build_prop("device",  "lmi");
-        set_ro_build_prop("fingerprint", "Redmi/lmi/lmi:10/QKQ1.191117.002/V12.0.3.0.QJKMIXM:user/release-keys");
-        property_override("ro.build.description", "lmi-user 10 QKQ1.191117.002 V12.0.3.0.QJKMIXM release-keys");
-
+        set_ro_product_prop("model", "POCO F3");
+        set_ro_product_prop("device", "alioth");
+        set_ro_build_prop("fingerprint", "Redmi/alioth/alioth:11/RKQ1.200826.002/V12.0.2.0.RKHEUXM:user/release-keys");
+        property_override("ro.build.description", "alioth-user 11 RKQ1.200826.002 V12.0.2.0.RKHEUXM release-keys");
     }
 }

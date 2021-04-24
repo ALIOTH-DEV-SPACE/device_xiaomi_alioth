@@ -36,11 +36,7 @@ LOCAL_SRC_FILES := \
     utils.c
 
 LOCAL_REQUIRED_MODULES := \
-<<<<<<< HEAD
     android.hardware.power@1.2-service.alioth.rc
-=======
-    android.hardware.power-service.lmi.rc
->>>>>>> 1e2702d... lmi: power: Rebase on LA.UM.9.12.r1-09000-SMxx50.0
 
 LOCAL_SHARED_LIBRARIES := \
     android.hardware.power-ndk_platform \
@@ -56,11 +52,7 @@ include $(BUILD_EXECUTABLE)
 
 include $(CLEAR_VARS)
 
-<<<<<<< HEAD
 LOCAL_MODULE := android.hardware.power@1.2-service.alioth.rc
-=======
-LOCAL_MODULE := android.hardware.power-service.lmi.rc
->>>>>>> 1e2702d... lmi: power: Rebase on LA.UM.9.12.r1-09000-SMxx50.0
 LOCAL_MODULE_TAGS  := optional
 LOCAL_MODULE_CLASS := ETC
 
