@@ -4,6 +4,9 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+# Security patch level
+VENDOR_SECURITY_PATCH := 2021-03-01
+
 DEVICE_PATH := device/xiaomi/alioth
 
 # Inherit from sm8250-common
@@ -25,5 +28,3 @@ TARGET_RECOVERY_DEVICE_MODULES := libinit_alioth
 # Kernel
 TARGET_KERNEL_SOURCE := kernel/xiaomi/alioth
 TARGET_KERNEL_CONFIG := vendor/alioth_defconfig
-
-
