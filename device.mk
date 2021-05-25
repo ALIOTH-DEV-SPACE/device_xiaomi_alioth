@@ -12,6 +12,9 @@ PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 PRODUCT_SHIPPING_API_LEVEL := 30
 
+# Properties
+TARGET_VENDOR_PROP := $(LOCAL_PATH)/vendor.prop
+
 #Audio
 PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,device/xiaomi/alioth/audio,$(TARGET_COPY_OUT_VENDOR)/etc)
 
