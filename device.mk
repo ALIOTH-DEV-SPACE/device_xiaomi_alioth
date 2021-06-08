@@ -4,6 +4,8 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+BOARD_BOOT_HEADER_VERSION := 3
+
 # Inherit from sm8250-common
 $(call inherit-product, device/xiaomi/sm8250-common/kona.mk)
 $(call inherit-product, vendor/xiaomi/alioth/alioth-vendor.mk)
@@ -11,9 +13,6 @@ $(call inherit-product, vendor/xiaomi/alioth/alioth-vendor.mk)
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 PRODUCT_SHIPPING_API_LEVEL := 30
-
-# Properties
-TARGET_VENDOR_PROP := $(LOCAL_PATH)/vendor.prop
 
 #Audio
 PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,device/xiaomi/alioth/audio,$(TARGET_COPY_OUT_VENDOR)/etc)
@@ -34,4 +33,8 @@ PRODUCT_COPY_FILES += \
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay 
-    
+
+# Properties
+TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
+TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
+
