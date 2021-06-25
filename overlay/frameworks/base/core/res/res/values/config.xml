@@ -61,7 +61,7 @@
     <!-- Screen brightness used to dim the screen while dozing in a very low power state.
          May be less than the minimum allowed brightness setting
          that can be set by the user. -->
-    <integer name="config_screenBrightnessDoze">15</integer>
+    <integer name="config_screenBrightnessDoze">17</integer>
 
     <!-- Default screen brightness setting.
          Must be in the range specified by minimum and maximum. -->
@@ -104,16 +104,16 @@
          when adapting to brighter or darker environments.  This parameter controls how quickly
          brightness changes occur in response to an observed change in light level that exceeds the
          hysteresis threshold. -->
-    <integer name="config_autoBrightnessBrighteningLightDebounce">800</integer>
-    <integer name="config_autoBrightnessDarkeningLightDebounce">800</integer>
+    <integer name="config_autoBrightnessBrighteningLightDebounce">1000</integer>
+    <integer name="config_autoBrightnessDarkeningLightDebounce">1000</integer>
     
     
         <!-- Fast brightness animation ramp rate in brightness units per second-->
-    <integer name="config_brightness_ramp_rate_fast">1800</integer>
+    <integer name="config_brightness_ramp_rate_fast">2466</integer>
     
      
     <!-- Slow brightness animation ramp rate in brightness units per second-->
-     <integer name="config_brightness_ramp_rate_slow">600</integer>
+     <integer name="config_brightness_ramp_rate_slow">1973</integer>
      
         
      <!-- Flag indicating whether the we should enable the automatic brightness in Settings.
