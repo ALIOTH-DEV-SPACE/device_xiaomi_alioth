@@ -325,10 +325,10 @@
         <item>4000</item>
     </array>
     <array name="config_screenBrighteningThresholds">
-        <item>@null</item>
+        <item>0</item>
     </array>
     <array name="config_screenDarkeningThresholds">
-        <item>@null</item>
+        <item>0</item>
     </array>
     <array name="config_screenThresholdLevels">
     </array>
@@ -376,6 +376,9 @@
          manually by the user. Off by default, since the expected haptic feedback may not be
          available on some devices. -->
     <bool name="config_enableHapticTextHandle">true</bool>
+	
+    <!-- Pocket Lock -->
+    <bool name="config_pocketModeSupported">false</bool>
 
 </resources>
 
