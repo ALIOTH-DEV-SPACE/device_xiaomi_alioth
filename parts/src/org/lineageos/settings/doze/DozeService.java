@@ -28,6 +28,16 @@ import android.util.Log;
 public class DozeService extends Service {
     private static final String TAG = "DozeService";
     private static final boolean DEBUG = false;
+    private OrientationSensor mOrientationSensor;
+    private Context mContext;
+
+    private static final String DOZE_INTENT = "com.android.systemui.doze.pulse";
+
+    private OrientationSensor.OrientationListener mOrientationListener =
+            new OrientationSensor.OrientationListener() {
+                public void onEvent() {}
+    };
+
 
     private PickupSensor mPickupSensor;
 
@@ -35,7 +45,8 @@ public class DozeService extends Service {
     public void onCreate() {
         if (DEBUG) Log.d(TAG, "Creating service");
         mPickupSensor = new PickupSensor(this);
-
+        mContext = this;
+        mOrientationSensor = new OrientationSensor(mContext, mOrientationListener);
         IntentFilter screenStateFilter = new IntentFilter();
         screenStateFilter.addAction(Intent.ACTION_SCREEN_ON);
         screenStateFilter.addAction(Intent.ACTION_SCREEN_OFF);
@@ -69,9 +80,11 @@ public class DozeService extends Service {
         if (DozeUtils.isHandwaveGestureEnabled(this) ||
                 DozeUtils.isPocketGestureEnabled(this)) {
         }
+        mOrientationSensor.setEnabled(true);
     }
 
     private void onDisplayOff() {
+        mContext.sendBroadcast(new Intent(DOZE_INTENT));
         if (DEBUG) Log.d(TAG, "Display off");
         if (DozeUtils.isPickUpEnabled(this)) {
             mPickupSensor.enable();
@@ -79,6 +92,7 @@ public class DozeService extends Service {
         if (DozeUtils.isHandwaveGestureEnabled(this) ||
                 DozeUtils.isPocketGestureEnabled(this)) {
         }
+        mOrientationSensor.setEnabled(false);
     }
 
     private BroadcastReceiver mScreenStateReceiver = new BroadcastReceiver() {
