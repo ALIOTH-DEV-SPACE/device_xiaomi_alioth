@@ -34,12 +34,7 @@ public class DozeService extends Service {
     private static final String DOZE_INTENT = "com.android.systemui.doze.pulse";
 
     private OrientationSensor.OrientationListener mOrientationListener =
-            new OrientationSensor.OrientationListener() {
-                public void onEvent() {
-                setOrientationSensor(false);
-                handleOrientation();
-            }
-    };
+            new OrientationSensor.OrientationListener() {};
 
 
     private PickupSensor mPickupSensor;
@@ -83,6 +78,7 @@ public class DozeService extends Service {
         if (DozeUtils.isHandwaveGestureEnabled(this) ||
                 DozeUtils.isPocketGestureEnabled(this)) {
         }
+        mOrientationSensor.setEnabled(true);
     }
 
     private void onDisplayOff() {
@@ -94,7 +90,7 @@ public class DozeService extends Service {
         if (DozeUtils.isHandwaveGestureEnabled(this) ||
                 DozeUtils.isPocketGestureEnabled(this)) {
         }
-        mOrientationSensor.setEnabled(enabled);
+        mOrientationSensor.setEnabled(false);
     }
 
     private BroadcastReceiver mScreenStateReceiver = new BroadcastReceiver() {
