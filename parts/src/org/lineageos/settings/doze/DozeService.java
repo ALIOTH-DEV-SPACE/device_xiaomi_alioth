@@ -29,6 +29,7 @@ public class DozeService extends Service {
     private static final String TAG = "DozeService";
     private static final boolean DEBUG = false;
     private OrientationSensor mOrientationSensor;
+    private Context mContext;
 
     private static final String DOZE_INTENT = "com.android.systemui.doze.pulse";
 
