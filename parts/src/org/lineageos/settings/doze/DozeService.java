@@ -34,7 +34,9 @@ public class DozeService extends Service {
     private static final String DOZE_INTENT = "com.android.systemui.doze.pulse";
 
     private OrientationSensor.OrientationListener mOrientationListener =
-            new OrientationSensor.OrientationListener() {};
+            new OrientationSensor.OrientationListener() {
+                public void onEvent() {}
+    };
 
 
     private PickupSensor mPickupSensor;
