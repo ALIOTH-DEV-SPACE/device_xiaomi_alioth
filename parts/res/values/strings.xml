@@ -23,19 +23,10 @@
     <!-- DC Dimming tile -->
     <string name="dc_dimming_tile_title">DC Dimming</string>
 
-     <!--    Device specific  -->
+     <!-- Device specific  -->
      <string name="device_specific_settings_title">Device-specific settings</string>
     <string name="device_specific_settings_summary">Special Settings</string>
-    <string name="device_min_refresh_rate">Minimum Refresh Rate</string>
     <string name="msg_device_need_restart">Please restart device for this to take effect.</string>
-
-    <!--  DT2W    -->
-    <string name="dt2w_enable_title">Double-Tap to Wake </string>
-    <string name="dt2w_enable_summary">Display wake up from doze by a double-tap</string>
-    
-    <!-- Features Menu-->
-    <string name="feature_display_title">Display features</string>
-    <string name="feature_display_summary">Double tap to wake and Display Refresh settings</string>
 
     <!-- Thermal Profiles -->
     <string name="thermal_title">Thermal Profiles</string>

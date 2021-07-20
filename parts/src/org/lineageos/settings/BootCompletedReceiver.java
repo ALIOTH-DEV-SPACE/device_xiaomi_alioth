@@ -32,33 +32,9 @@ public class BootCompletedReceiver extends BroadcastReceiver {
 
     private static final boolean DEBUG = false;
     private static final String TAG = "XiaomiParts";
-    public static final String SHAREDD2TW = "sharadeD2TW";
     private ITouchFeature mTouchFeature;
     @Override
     public void onReceive(final Context context, Intent intent) {
-
-     try {
-            // We need to reset this setting to trigger an update in display service
-            final float refreshRate = Settings.System.getFloat(context.getContentResolver(),
-                Settings.System.MIN_REFRESH_RATE, 120.0f);
-            Thread.sleep(500);
-            Settings.System.putFloat(context.getContentResolver(),
-                Settings.System.MIN_REFRESH_RATE, 120.0f);
-            Thread.sleep(500);
-            Settings.System.putFloat(context.getContentResolver(),
-                Settings.System.MIN_REFRESH_RATE, refreshRate);
-        } catch (Exception e) {
-            // Ignore
-        }
-
-        //Micro-Service to restore sata of dt2w on reboot
-        SharedPreferences prefs = context.getSharedPreferences(SHAREDD2TW, Context.MODE_PRIVATE); 
-        try {
-            mTouchFeature = ITouchFeature.getService();
-            mTouchFeature.setTouchMode(14,prefs.getInt(SHAREDD2TW, 1));
-        } catch (Exception e) {
-            // Do nothing
-        }
 
         if (DEBUG) Log.d(TAG, "Received boot completed intent");
         ThermalUtils.startService(context);
